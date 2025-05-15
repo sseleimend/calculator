@@ -45,6 +45,14 @@ function useOperator(operator) {
   operatorValue = operator;
 }
 
+function addDecimal() {
+  if (awaitingNextValue) {
+    return;
+  }
+
+  calculatorDisplay.textContent += ".";
+}
+
 inputBtns.forEach((inputBtn) => {
   if (inputBtn.classList.length === 0) {
     inputBtn.addEventListener("click", () => addNumberValue(inputBtn.value));
