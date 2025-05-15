@@ -7,7 +7,7 @@ let firstValue = 0;
 function addNumberValue(number) {
   const displayValue = calculatorDisplay.textContent;
   calculatorDisplay.textContent =
-    displayValue === 0 ? number : displayValue + number;
+    displayValue === "0" ? number : displayValue + number;
 }
 
 inputBtns.forEach((inputBtn) => {
