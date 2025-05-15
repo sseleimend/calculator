@@ -50,7 +50,9 @@ function addDecimal() {
     return;
   }
 
-  calculatorDisplay.textContent += ".";
+  if (!calculatorDisplay.textContent.includes(".")) {
+    calculatorDisplay.textContent += ".";
+  }
 }
 
 inputBtns.forEach((inputBtn) => {
