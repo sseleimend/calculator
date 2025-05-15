@@ -1,3 +1,8 @@
+import addDecimal from "./src/addDecimal.js";
+import addNumberValue from "./src/addNumberValue.js";
+import { inputBtns, clearBtn } from "./src/selectors.js";
+import useOperator from "./src/useOperator.js";
+
 inputBtns.forEach((inputBtn) => {
   if (inputBtn.classList.length === 0) {
     inputBtn.addEventListener("click", () => addNumberValue(inputBtn.value));
