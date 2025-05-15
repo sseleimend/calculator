@@ -24,7 +24,9 @@ const calculate = {
   "=": (firstNumber, secondNuumber) => secondNuumber,
 };
 
-function useOperator(operator) {}
+function useOperator(operator) {
+  const currentValue = Number(calculatorDisplay.textContent);
+}
 
 inputBtns.forEach((inputBtn) => {
   if (inputBtn.classList.length === 0) {
