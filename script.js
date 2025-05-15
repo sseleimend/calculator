@@ -17,14 +17,6 @@ function addNumberValue(number) {
   }
 }
 
-const calculate = {
-  "/": (firstNumber, secondNuumber) => firstNumber / secondNuumber,
-  "*": (firstNumber, secondNuumber) => firstNumber * secondNuumber,
-  "+": (firstNumber, secondNuumber) => firstNumber + secondNuumber,
-  "-": (firstNumber, secondNuumber) => firstNumber - secondNuumber,
-  "=": (firstNumber, secondNuumber) => secondNuumber,
-};
-
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
 
