@@ -5,7 +5,9 @@ const clearBtn = document.getElementById("clear-btn");
 let firstValue = 0;
 
 function addNumberValue(number) {
-  console.log(number);
+  const displayValue = calculatorDisplay.textContent;
+  calculatorDisplay.textContent =
+    displayValue === 0 ? number : displayValue + number;
 }
 
 inputBtns.forEach((inputBtn) => {
