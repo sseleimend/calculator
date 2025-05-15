@@ -4,6 +4,7 @@ const clearBtn = document.getElementById("clear-btn");
 
 let firstValue = 0;
 let awaitingNextValue = false;
+let operatorValue = "";
 
 function addNumberValue(number) {
   if (awaitingNextValue) {
@@ -26,6 +27,10 @@ const calculate = {
 
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
+
+  if (operatorValue) {
+    operatorValue = operator;
+  }
 }
 
 inputBtns.forEach((inputBtn) => {
