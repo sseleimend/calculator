@@ -31,6 +31,12 @@ function useOperator(operator) {
   if (operatorValue) {
     operatorValue = operator;
   }
+
+  if (!firstValue) {
+    firstValue = currentValue;
+  }
+
+  awaitingNextValue = true;
 }
 
 inputBtns.forEach((inputBtn) => {
