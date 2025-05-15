@@ -1,13 +1,3 @@
-function addDecimal() {
-  if (awaitingNextValue) {
-    return;
-  }
-
-  if (!calculatorDisplay.textContent.includes(".")) {
-    calculatorDisplay.textContent += ".";
-  }
-}
-
 inputBtns.forEach((inputBtn) => {
   if (inputBtn.classList.length === 0) {
     inputBtn.addEventListener("click", () => addNumberValue(inputBtn.value));
