@@ -1,3 +1,5 @@
+import { calculatorDisplay } from "./selectors.js";
+
 let firstValue = 0;
 let awaitingNextValue = false;
 let operatorValue = "";
@@ -24,4 +26,11 @@ export function getOperatorValue() {
 
 export function setOperatorValue(value) {
   operatorValue = value;
+}
+
+export function resetAll() {
+  firstValue = 0;
+  operatorValue = "";
+  awaitingNextValue = false;
+  calculatorDisplay.textContent = "0";
 }

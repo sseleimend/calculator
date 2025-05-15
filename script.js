@@ -2,6 +2,7 @@ import addDecimal from "./src/addDecimal.js";
 import addNumberValue from "./src/addNumberValue.js";
 import { inputBtns, clearBtn } from "./src/selectors.js";
 import useOperator from "./src/useOperator.js";
+import { resetAll } from "./src/values.js";
 
 inputBtns.forEach((inputBtn) => {
   if (inputBtn.classList.length === 0) {
@@ -12,12 +13,5 @@ inputBtns.forEach((inputBtn) => {
     inputBtn.addEventListener("click", () => addDecimal());
   }
 });
-
-function resetAll() {
-  firstValue = 0;
-  operatorValue = "";
-  awaitingNextValue = false;
-  calculatorDisplay.textContent = "0";
-}
 
 clearBtn.addEventListener("click", resetAll);
