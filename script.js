@@ -59,3 +59,5 @@ function resetAll() {
   awaitingNextValue = false;
   calculatorDisplay.textContent = "0";
 }
+
+clearBtn.addEventListener("click", resetAll);
