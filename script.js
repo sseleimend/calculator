@@ -28,8 +28,9 @@ const calculate = {
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
 
-  if (operatorValue) {
+  if (operatorValue && awaitingNextValue) {
     operatorValue = operator;
+    return;
   }
 
   if (!firstValue) {
@@ -40,6 +41,7 @@ function useOperator(operator) {
   }
 
   awaitingNextValue = true;
+  operatorValue = operator;
 }
 
 inputBtns.forEach((inputBtn) => {
