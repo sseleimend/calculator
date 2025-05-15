@@ -1,18 +1,3 @@
-const calculatorDisplay = document.querySelector("h1");
-const inputBtns = document.querySelectorAll("button");
-const clearBtn = document.getElementById("clear-btn");
-
-function addNumberValue(number) {
-  if (awaitingNextValue) {
-    calculatorDisplay.textContent = number;
-    awaitingNextValue = false;
-  } else {
-    const displayValue = calculatorDisplay.textContent;
-    calculatorDisplay.textContent =
-      displayValue === "0" ? number : displayValue + number;
-  }
-}
-
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
 
