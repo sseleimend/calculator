@@ -52,3 +52,10 @@ inputBtns.forEach((inputBtn) => {
     inputBtn.addEventListener("click", () => useOperator(inputBtn.value));
   }
 });
+
+function resetAll() {
+  firstValue = 0;
+  operatorValue = "";
+  awaitingNextValue = false;
+  calculatorDisplay.textContent = "0";
+}
